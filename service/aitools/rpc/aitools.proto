@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package aitools;
+
+option go_package = "./aitools";
+
+message SayHelloReq {}
+
+message SayHelloResp {
+  string pong = 1;
+}
+
+message RemoteCommandReq {
+  string host = 1;
+  int32 port = 2;
+  string commands = 3;
+}
+
+message RemoteCommandResp {
+  string output = 1;
+  int32 status = 2;
+}
+
+message BackuptaskReq {
+  string host = 1;
+  int32 port = 2;
+  string commands = 3;
+}
+
+message BackuptaskResp {
+  string output = 1;
+  int32 status = 2;
+}
+
+
+service AiTools_rpc {
+
+  rpc SayHello(SayHelloReq) returns (SayHelloResp);
+  rpc RemoteCommand(RemoteCommandReq) returns (RemoteCommandResp);
+}

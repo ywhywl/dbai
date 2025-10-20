@@ -1,0 +1,4 @@
+{"@timestamp":"2025-08-07T07:40:09.052+08:00","caller":"logx/rotatelogger.go:418","content":"compressing log file: logs/stat.log-2025-08-06","level":"info"}
+{"@timestamp":"2025-08-07T07:40:09.053+08:00","caller":"logx/rotatelogger.go:418","content":"compressing log file: logs/access.log-2025-08-06","level":"info"}
+{"@timestamp":"2025-08-07T07:40:09.057+08:00","caller":"logx/rotatelogger.go:422","content":"compressed log file: logs/access.log-2025-08-06, took 4.556181ms","level":"info"}
+{"@timestamp":"2025-08-07T07:40:09.070+08:00","caller":"logx/rotatelogger.go:422","content":"compressed log file: logs/stat.log-2025-08-06, took 18.718214ms","level":"info"}

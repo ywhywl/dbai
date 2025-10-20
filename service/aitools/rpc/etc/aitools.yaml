@@ -1,0 +1,25 @@
+Name: aitools_rpc
+ListenOn: 127.0.0.1:8080
+Mode: dev
+Etcd:
+  Hosts:
+    - 127.0.0.1:2379
+  Key: aitools_rpc
+
+# 日志配置
+Log:
+  ServiceName: aitools-rpc
+  Mode: file                    # console, file, volume
+  Level: debug                  # debug, info, error, severe
+  Path: logs                    # 日志文件路径
+  MaxContentLength: 10000       # 最大内容长度
+  Compress: true                # 是否压缩
+  KeepDays: 7                   # 保留天数
+  StackCooldownMillis: 100      # 堆栈冷却时间
+
+RemoteCommand:
+  TestUsername: "wenlongy"
+  TestPassword: "nihao123!"
+  TestPrivateKey: "~/.ssh/id_rsa"
+  ConnTimeout: 30
+  CmdTimeout: 30

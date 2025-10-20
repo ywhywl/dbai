@@ -1,0 +1,24 @@
+Name: aitools-api
+Host: 0.0.0.0
+Port: 8888
+PidFile: api-aitools.pid
+BackupCheckCommand: tail -n 30 "$(ls -t /home/wenlongy/data/3306/mybackup/my3306/xtrabackup/full*.log | head -n 1)"
+
+# 日志配置
+Log:
+  ServiceName: aitools-api
+  Mode: file                    # console, file, volume
+  Level: debug                  # debug, info, error, severe
+  Path: logs                    # 日志文件路径
+  MaxContentLength: 10000       # 最大内容长度
+  Compress: true                # 是否压缩
+  KeepDays: 7                   # 保留天数
+  StackCooldownMillis: 100      # 堆栈冷却时间
+
+AitoolsRpc:
+  App: aitools_rpc
+  Etcd:
+    Hosts:
+      - 127.0.0.1:2379
+    Key: aitools_rpc
+  Timeout: 60000
