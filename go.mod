@@ -1,6 +1,6 @@
 module db_ai
 
-go 1.24.5
+go 1.23.5
 
 require (
 	github.com/stretchr/testify v1.10.0
